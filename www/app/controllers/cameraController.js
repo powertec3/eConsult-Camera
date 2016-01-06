@@ -1,9 +1,10 @@
-﻿cameraApp.controller('cameraController', function ($scope, $http,$rootScope) {
+﻿cameraApp.controller('cameraController', function ($scope, $http, $rootScope) {
 
 
-   
+
     $scope.capturePhoto = function () {
-       
+
+        alert("test");
         $scope.test = "testing camera...";
         alert($scope.test);
 
@@ -17,7 +18,7 @@
     function onSuccess(imageData) {
 
         // $scope.$apply(function () {
-           
+
 
         //var image = imageData.toDataURL({ format: 'jpeg', quality: 0.9 });
 
@@ -25,7 +26,7 @@
 
         var currentTS = new Date().getTime();
         var timestamp = currentTS.toString();
-           
+
 
         var clientimage = {
 
@@ -42,7 +43,7 @@
 
         //alert("sending to server");
         // alert(clientimage.source);
-            
+
         var transform = function (data) {
             return $.param(data);
         }
@@ -50,38 +51,38 @@
         /*
         $http.post('http://192.168.2.103:8080/save_camera_image', JSON.stringify(clientimage), {
 
-             headers: { 'Content-Type': 'application/json; charset=utf-8' }
-         }).success(function () {
+        headers: { 'Content-Type': 'application/json; charset=utf-8' }
+        }).success(function () {
 
-             //alert(status);
-             alert("Image Upload Successfully");
-         }).catch(function (response, status, headers, config) {
-             alert("Error uploading camera image" + response.data + response.status );
-         });
+        //alert(status);
+        alert("Image Upload Successfully");
+        }).catch(function (response, status, headers, config) {
+        alert("Error uploading camera image" + response.data + response.status );
+        });
          
-         */
-        
+        */
+
 
         $.ajax({
             url: 'http://172.0.2.85:8080/save_camera_image',
             async: true,
             data: JSON.stringify(clientimage),
-        contentType: 'application/json; charset=utf-8',
-        type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            type: 'POST',
             success: function (data, status, jqXHR) {
-           
-            alert("image upload successfully.");
-        },
-        error: function (jqXHR, status, err) {
-            alert("Error upload image");
-        }
-       
+
+                alert("image upload successfully.");
+            },
+            error: function (jqXHR, status, err) {
+                alert("Error upload image");
+            }
+
 
         }
             );
-           
-           
-        
+
+
+
 
     }
 
