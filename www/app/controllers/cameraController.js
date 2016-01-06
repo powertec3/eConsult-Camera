@@ -4,7 +4,7 @@
    
     $scope.capturePhoto = function () {
        
-        //$scope.test = "testing camera...";
+        $scope.test = "testing camera...";
         alert($scope.test);
 
         navigator.camera.getPicture(onSuccess, onFail, {
