@@ -1,6 +1,6 @@
-﻿cameraApp.controller('scanController',['$scope','authService','$http','$location','$rootScope', function ($scope, authService, $http,$location,$rootScope) {
+﻿cameraApp.controller('scanController', ['$scope', 'authService', '$http', '$location', '$rootScope', function ($scope, authService, $http, $location, $rootScope) {
 
-   
+
 
     $scope.loginData = {
         UserId: "",
@@ -10,9 +10,10 @@
     $scope.message = "";
 
     $scope.scanQR = function () {
+        alert("scan starting...");
         cordova.plugins.barcodeScanner.scan(
           function (result) {
-            
+
 
               if (result.cancelled == false) {
                   try {
@@ -45,13 +46,11 @@
         //alert("call web api");
         //alert($scope.loginData.UserId);
         authService.login($scope.loginData).then(function (response) {
-           
-            if(response.isExist==true)
-            {
+
+            if (response.isExist == true) {
                 $location.path("/Camera");
             }
-            else
-            {
+            else {
                 alert("User Not Exists");
             }
 
@@ -62,5 +61,5 @@
          });
 
     };
-   
-}]);
+
+} ]);
