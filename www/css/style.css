@@ -60,7 +60,7 @@ body{
 .wrapper{
 	margin:auto;
 	background:url('../img/Mobile_UI_Camera-app-VFL-background.jpg') no-repeat;
-	background-size:cover;
+	/* background-size:cover;  */
 }
 .inner-wrapper{
 	padding:10%;
@@ -110,7 +110,7 @@ body{
 .btnLogin{
 	border:none;
 	background:#ffffff;
-	opacity:0.5;
+	/* opacity:0.5; */
 	padding:10px;
 	width:77%;
 	max-width:730px;
@@ -166,7 +166,7 @@ span.answer{
 }
 .btnBefore{
 	background:url('../img/Mobile_UI_Camera-app-Button-Before.png') no-repeat;
-	background-size:150px;
+	/* background-size:150px; */
 	border:none;
 	width:150px;
 	height:150px;
@@ -174,7 +174,7 @@ span.answer{
 }
 .btnAfter{
 	background:url('../img/Mobile_UI_Camera-app-Button-After.png') no-repeat;
-	background-size:150px;
+	/* background-size:150px; */
 	border:none;
 	width:150px;
 	height:150px;
