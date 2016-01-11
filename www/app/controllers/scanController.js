@@ -42,8 +42,8 @@
 
     $scope.login = function () {
 
-        alert("call web api");
-        alert($scope.loginData.UserId);
+        //alert("call web api");
+        //alert($scope.loginData.UserId);
         authService.login($scope.loginData).then(function (response) {
            
             if(response.isExist==true)
