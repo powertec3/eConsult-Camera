@@ -61,7 +61,7 @@
 //                alert("User Not Exists");
 //            }
 
-    alert (response.data[0].Id);
+    alert (response);
 
     if (response.data[0] != null) {
                 $rootScope.customer = customer;
