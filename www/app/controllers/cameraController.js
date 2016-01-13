@@ -1,6 +1,6 @@
 ﻿cameraApp.controller('cameraController', function ($scope, $http, $rootScope) {
 
-
+    $scope.customerId = $rootScope.customer;
 
     $scope.capturePhoto = function () {
 
