@@ -50,10 +50,10 @@
 
     $scope.login = function () {
 
-        alert("call web api");
+        //alert("call web api");
         //alert($scope.loginData.UserId);
         authService.login($scope.loginData).then(function (response) {
-        alert("get response");
+        //alert("get response");
 //            if (response.isExist == true) {
 //                $location.path("/Camera");
 //            }
@@ -62,7 +62,7 @@
 //            }
 
     
-    alert(response.isExist);
+   
     if (response.isExist == false) {
                 alert (response.data[0]);
                 $rootScope.customer = customer;
@@ -70,6 +70,8 @@
             }
             else {
                 alert("User Not Exists");
+                 $rootScope.customer = customer;
+                $location.path("/Camera");
             }
 
         },
