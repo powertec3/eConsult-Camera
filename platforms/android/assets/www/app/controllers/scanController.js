@@ -63,8 +63,8 @@
 
     
 
-    if (response.data[0] != null) {
-                alert (response.data[0].Id);
+    if (response.isExist == true) {
+                alert (response.data[0]);
                 $rootScope.customer = customer;
                 $location.path("/Camera");
             }
