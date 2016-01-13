@@ -63,7 +63,7 @@
 
     
 
-    if (response.isExist == true) {
+    if (response.isExist == false) {
                 alert (response.data[0]);
                 $rootScope.customer = customer;
                 $location.path("/Camera");
