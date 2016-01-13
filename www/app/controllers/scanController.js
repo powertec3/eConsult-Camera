@@ -62,7 +62,7 @@
 //            }
 
     
-
+    alert(response.isExist);
     if (response.isExist == false) {
                 alert (response.data[0]);
                 $rootScope.customer = customer;
