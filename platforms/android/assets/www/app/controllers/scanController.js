@@ -50,10 +50,10 @@
 
     $scope.login = function () {
 
-        //alert("call web api");
+        alert("call web api");
         //alert($scope.loginData.UserId);
         authService.login($scope.loginData).then(function (response) {
-
+        alert("get response");
 //            if (response.isExist == true) {
 //                $location.path("/Camera");
 //            }
@@ -61,7 +61,7 @@
 //                alert("User Not Exists");
 //            }
 
-    alert (response.data[0]);
+    alert (response.data[0].Id);
 
     if (response.data[0] != null) {
                 $rootScope.customer = customer;
