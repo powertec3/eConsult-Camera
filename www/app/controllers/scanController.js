@@ -61,9 +61,10 @@
 //                alert("User Not Exists");
 //            }
 
-    alert (response);
+    
 
     if (response.data[0] != null) {
+                alert (response.data[0].Id);
                 $rootScope.customer = customer;
                 $location.path("/Camera");
             }
