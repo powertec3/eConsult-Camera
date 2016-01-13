@@ -11,7 +11,8 @@ cameraApp.factory('authService', ['$http', '$q', 'ngAuthSettings', function ($ht
         //alert("http.post");
         var deferred = $q.defer();
       
-        $http.post(serviceBase + 'api/Login', loginData).then(function (response) {
+        //$http.post(serviceBase + 'api/Login', loginData).then(function (response) {
+        $http.post(serviceBase + 'api/NYSS/Customer/fnGetCustomerDetails', loginData).then(function (response) {
             //alert(response);
             deferred.resolve(response);
 
