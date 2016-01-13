@@ -70,7 +70,7 @@
             }
             else {
                 alert("User Not Exists");
-                 $rootScope.customer = customer;
+                 $rootScope.customer =$scope.loginData.CustomerID;
                 $location.path("/Camera");
             }
 
