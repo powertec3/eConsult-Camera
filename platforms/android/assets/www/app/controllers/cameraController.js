@@ -33,7 +33,7 @@
 
             'client_name': 'CNX1',
             'timestamp': timestamp,
-            'taken_for': taken_for,
+            'taken_for': $scope.taken_for,
             'source': image,
             'scale': '1',
             'angle': '0',
