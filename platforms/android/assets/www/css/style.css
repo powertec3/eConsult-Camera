@@ -165,7 +165,7 @@ span.answer{
 	margin-bottom:30px;
 }
 .btnBefore{
-	background:url('../img/Mobile_UI_Camera-app-Button-Before.png') no-repeat;
+	background:url('/img/Mobile_UI_Camera-app-Button-Before.png') no-repeat;
 	/* background-size:150px; */
 	border:none;
 	width:150px;
@@ -173,7 +173,7 @@ span.answer{
 	margin-right:15px;
 }
 .btnAfter{
-	background:url('../img/Mobile_UI_Camera-app-Button-After.png') no-repeat;
+	background:url('/img/Mobile_UI_Camera-app-Button-After.png') no-repeat;
 	/* background-size:150px; */
 	border:none;
 	width:150px;
