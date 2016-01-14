@@ -2,12 +2,12 @@
 
     $scope.customerId = $rootScope.customer;
 
-    $scope.capturePhoto = function () {
+    $scope.capturePhoto = function (taken_for) {
 
-        alert("test");
-        $scope.test = "testing camera...";
-        alert($scope.test);
-
+        //        alert("test");
+        //        $scope.test = "testing camera...";
+        //        alert($scope.test);
+        $scope.taken_for = taken_for;
         navigator.camera.getPicture(onSuccess, onFail, {
             quality: 100,
             format: 'jpeg',
@@ -27,11 +27,13 @@
         var currentTS = new Date().getTime();
         var timestamp = currentTS.toString();
 
+        alert($scope.taken_for);
 
         var clientimage = {
 
             'client_name': 'CNX1',
             'timestamp': timestamp,
+            'taken_for': taken_for,
             'source': image,
             'scale': '1',
             'angle': '0',
