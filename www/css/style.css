@@ -168,16 +168,17 @@ span.answer{
 	background:url('../img/Mobile_UI_Camera-app-Button-Before.png') no-repeat;
 	/* background-size:150px; */
 	border:none;
-	width:150px;
-	height:150px;
-	margin-right:15px;
+	width:250px;
+	height:250px;
+	margin-right:25px;
 }
 .btnAfter{
 	background:url('../img/Mobile_UI_Camera-app-Button-After.png') no-repeat;
 	/* background-size:150px; */
 	border:none;
-	width:150px;
-	height:150px;
+	width:250px;
+	height:250px;
+	margin-right:25px;
 }
 .divButtons{
 	margin-top:35%;
