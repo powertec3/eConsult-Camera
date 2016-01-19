@@ -9,7 +9,7 @@
     //    };
 
   $scope.loginData = {
-       CompnayID: "SG01",
+       CompanyID: "SG01",
        CustomerID: "",
         
     };
@@ -51,7 +51,8 @@
     $scope.login = function () {
 
         //alert("call web api");
-        //alert($scope.loginData.UserId);
+        alert($scope.loginData.CompanyID);
+        alert($scope.loginData.CustomerID);
         authService.login($scope.loginData).then(function (response) {
         //alert("get response");
 //            if (response.isExist == true) {
