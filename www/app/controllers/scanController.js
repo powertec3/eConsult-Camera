@@ -64,12 +64,13 @@
     
    
     if (response.isExist == false) {
+               alert("User Not  Exists");
                 alert (response.data[0]);
                 $rootScope.customer = customer;
                 $location.path("/Camera");
             }
             else {
-                alert("User Not Exists");
+                alert("User  Exists");
                  $rootScope.customer =$scope.loginData.CustomerID;
                 $location.path("/Camera");
             }
