@@ -62,7 +62,7 @@
 //            }
 
     
-   
+     alert (response.isExist);
     if (response.isExist == false) {
                alert("User Not  Exists");
                 alert (response.data[0]);
