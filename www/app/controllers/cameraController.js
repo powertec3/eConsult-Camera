@@ -1,4 +1,4 @@
-﻿cameraApp.controller('cameraController', function ($scope, $http, $rootScope) {
+﻿cameraApp.controller('cameraController', function ($scope, $http, $rootScope,ngAuthSettings) {
 
     $scope.customerId = $rootScope.customer;
 
@@ -31,7 +31,7 @@
 
         var clientimage = {
 
-            'client_name': 'CNX1',
+            'client_name': $scope.customerId,
             'timestamp': timestamp,
             'taken_for': $scope.taken_for,
             'source': image,
@@ -66,7 +66,7 @@
 
 
         $.ajax({
-            url: 'http://172.0.2.85:8080/save_camera_image',
+            url: ngAuthSettings.uploadServiceUri ,
             async: true,
             data: JSON.stringify(clientimage),
             contentType: 'application/json; charset=utf-8',
