@@ -40,7 +40,7 @@ cameraApp.run(function ($rootScope) {
 });
 
 //var serviceBase = 'http://testsvr.eurogrp.com:8006/';
-var serviceBase = 'http: //192.168.1.99:8006/';
+var serviceBase = 'http://192.168.1.99:8006/';
 var uploadUrl = 'http://192.168.0.15:8080/save_camera_image';
 
 cameraApp.constant('ngAuthSettings', {
