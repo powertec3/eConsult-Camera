@@ -51,8 +51,8 @@
     $scope.login = function () {
 
         //alert("call web api");
-        alert($scope.loginData.CompanyID);
-        alert($scope.loginData.CustomerID);
+        //alert($scope.loginData.CompanyID);
+       // alert($scope.loginData.CustomerID);
         authService.login($scope.loginData).then(function (response) {
         //alert("get response");
 //            if (response.isExist == true) {
@@ -66,12 +66,12 @@
      alert (response.isExist);
     if (response.isExist == false) {
                alert("User Not  Exists");
-                alert (response.data[0]);
-                $rootScope.customer = customer;
-                $location.path("/Camera");
+                //alert (response.data[0]);
+                //$rootScope.customer = customer;
+                //$location.path("/Camera");
             }
             else {
-                alert("User  Exists");
+                //alert("User  Exists");
                  $rootScope.customer =$scope.loginData.CustomerID;
                 $location.path("/Camera");
             }
