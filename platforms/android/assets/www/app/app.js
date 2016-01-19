@@ -34,9 +34,9 @@ cameraApp.config(function ($routeProvider, $locationProvider) {
 
 
 cameraApp.run(function ($rootScope) {
-    $rootScope.consultant = '';
+    //$rootScope.consultant = '';
     $rootScope.customer = '';
-    $rootScope.serverip = '';
+    //$rootScope.serverip = '';
 });
 
 //var serviceBase = 'http://testsvr.eurogrp.com:8006/';
