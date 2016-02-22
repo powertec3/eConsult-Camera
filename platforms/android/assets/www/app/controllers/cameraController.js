@@ -1,6 +1,7 @@
-﻿cameraApp.controller('cameraController', function ($scope, $http, $rootScope,ngAuthSettings) {
+﻿cameraApp.controller('cameraController', function ($scope, $http, $rootScope, ngAuthSettings) {
 
     $scope.customerId = $rootScope.customer;
+    $scope.serverip = $rootScope.serverip;
 
     $scope.capturePhoto = function (taken_for) {
 
@@ -27,7 +28,7 @@
         var currentTS = new Date().getTime();
         var timestamp = currentTS.toString();
 
-        alert($scope.taken_for);
+        //alert($scope.taken_for);
 
         var clientimage = {
 
@@ -66,7 +67,8 @@
 
 
         $.ajax({
-            url: ngAuthSettings.uploadServiceUri ,
+            //url: ngAuthSettings.uploadServiceUri,
+            url: $scope.serverip,
             async: true,
             data: JSON.stringify(clientimage),
             contentType: 'application/json; charset=utf-8',

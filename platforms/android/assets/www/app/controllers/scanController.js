@@ -25,15 +25,15 @@
               if (result.cancelled == false) {
                   try {
                       var barcode = result.text;
-//                      var code = barcode.split(";");
-//                      var consultant = code[0];
-//                      var customer = code[1];
-//                      var server = code[2];
+                      var code = barcode.split(";");
+                      var consultant = code[0];
+                      var customer = code[1];
+                      var server = code[2];
 
                       //alert(consultant + " " + customer + " " + server);
-                      //$rootScope.consultant = consultant;
-                      $rootScope.customer = barcode;
-                      //$rootScope.serverip = server;
+                      $rootScope.consultant = consultant;
+                      $rootScope.customer = customer;
+                      $rootScope.serverip = server;
 
                       $location.path("/Camera");
                   }

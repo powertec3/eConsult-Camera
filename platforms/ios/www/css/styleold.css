@@ -60,7 +60,7 @@ body{
 .wrapper{
 	margin:auto;
 	background:url('../img/Mobile_UI_Camera-app-VFL-background.jpg') no-repeat;
-	background-size:cover;
+	/* background-size:cover;  */
 }
 .inner-wrapper{
 	padding:10%;
@@ -69,17 +69,17 @@ body{
 	text-align:center;
 }
 .logo > img{
-	width:70%;
+	width:80%;
 }
 .qrCode{
 	text-align:center;
-	padding-top:10%;
+	padding-top:20%;
 }
 .qrCode > img{
-	width:68%;
+	width:75%;
 }
 .divForm{
-	padding-top:10%;
+	padding-top:20%;
 	text-align:center;
 }
 .loginForm input{
@@ -89,10 +89,9 @@ body{
 	color:white;
 	text-align:center;
 	width:70%;
-	padding: 5px 0 0 0;
+	padding:10px;
 	margin-bottom:15px;	
 	font-size:24px;
-	margin-left: 15%;
 }
 ::-webkit-input-placeholder {
    color: white;
@@ -149,7 +148,7 @@ footer{
   background:url('../img/Mobile_UI_Camera-app-Icon-PassWord.png') no-repeat 25px 0px; 
 }
 .divFormInfo{
-   padding-left: 13%;
+   padding-top:10%;
    text-align:left;
    margin:auto;
    width:320px;
@@ -182,6 +181,6 @@ span.answer{
 	margin-right:25px;
 }
 .divButtons{
-	margin-top:15%;
-	margin-bottom:10%;
+	margin-top:35%;
+	margin-bottom:80%;
 }
