@@ -19,8 +19,8 @@
     function onSuccess(imageData) {
 
         // $scope.$apply(function () {
-        $scope.showDialog = "yes";
-      
+
+        $scope.showDialog = true;
         //var image = imageData.toDataURL({ format: 'jpeg', quality: 0.9 });
 
         var image = "data:image/jpeg;base64," + imageData;
@@ -74,12 +74,12 @@
             contentType: 'application/json; charset=utf-8',
             type: 'POST',
             success: function (data, status, jqXHR) {
-                $scope.showDialog = "";
+                $scope.showDialog = false;
                 alert("image upload successfully.");
               
             },
             error: function (jqXHR, status, err) {
-                $scope.showDialog = "";
+                $scope.showDialog = false;
                 alert("Error upload image");
             }
 
