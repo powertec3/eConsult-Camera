@@ -32,7 +32,7 @@ cameraApp.factory('authService', ['$http', '$q', 'ngAuthSettings', function ($ht
 
         
 
-        $http.post(serviceBase + 'api/Login', loginData).success(function (response) {
+        $http.post(serviceBase + 'api/NYSS/Customer/fnGetCustomerDetails', loginData).success(function (response) {
             if (response) {
                 deferred.resolve(response);
             } else {

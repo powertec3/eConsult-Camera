@@ -34,13 +34,14 @@ cameraApp.config(function ($routeProvider, $locationProvider) {
 
 
 cameraApp.run(function ($rootScope) {
-    $rootScope.consultant = '';
+    //$rootScope.consultant = '';
     $rootScope.customer = '';
-    $rootScope.serverip = '';
+    //$rootScope.serverip = '';
 });
 
-var serviceBase = 'http://testsvr.eurogrp.com:8006/';
-var uploadUrl = 'http://192.168.0.15:8080/save_camera_image';
+//var serviceBase = 'http://testsvr.eurogrp.com:8006/';
+var serviceBase = 'http://192.168.1.99:8006/';
+var uploadUrl = 'http://172.0.2.85:8080/save_camera_image';
 
 cameraApp.constant('ngAuthSettings', {
     apiServiceBaseUri: serviceBase,

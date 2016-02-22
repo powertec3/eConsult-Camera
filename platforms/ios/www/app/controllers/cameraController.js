@@ -1,13 +1,13 @@
-﻿cameraApp.controller('cameraController', function ($scope, $http, $rootScope) {
+﻿cameraApp.controller('cameraController', function ($scope, $http, $rootScope,ngAuthSettings) {
 
+    $scope.customerId = $rootScope.customer;
 
+    $scope.capturePhoto = function (taken_for) {
 
-    $scope.capturePhoto = function () {
-
-        alert("test");
-        $scope.test = "testing camera...";
-        alert($scope.test);
-
+        //        alert("test");
+        //        $scope.test = "testing camera...";
+        //        alert($scope.test);
+        $scope.taken_for = taken_for;
         navigator.camera.getPicture(onSuccess, onFail, {
             quality: 100,
             format: 'jpeg',
@@ -27,11 +27,13 @@
         var currentTS = new Date().getTime();
         var timestamp = currentTS.toString();
 
+        alert($scope.taken_for);
 
         var clientimage = {
 
-            'client_name': 'CNX1',
+            'client_name': $scope.customerId,
             'timestamp': timestamp,
+            'taken_for': $scope.taken_for,
             'source': image,
             'scale': '1',
             'angle': '0',
@@ -64,7 +66,7 @@
 
 
         $.ajax({
-            url: 'http://172.0.2.85:8080/save_camera_image',
+            url: ngAuthSettings.uploadServiceUri ,
             async: true,
             data: JSON.stringify(clientimage),
             contentType: 'application/json; charset=utf-8',

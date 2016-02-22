@@ -9,7 +9,7 @@
     //    };
 
   $scope.loginData = {
-       CompnayID: "SG01",
+       CompanyID: "SG01",
        CustomerID: "",
         
     };
@@ -25,15 +25,15 @@
               if (result.cancelled == false) {
                   try {
                       var barcode = result.text;
-                      var code = barcode.split(";");
-                      var consultant = code[0];
-                      var customer = code[1];
-                      var server = code[2];
+//                      var code = barcode.split(";");
+//                      var consultant = code[0];
+//                      var customer = code[1];
+//                      var server = code[2];
 
                       //alert(consultant + " " + customer + " " + server);
-                      $rootScope.consultant = consultant;
-                      $rootScope.customer = customer;
-                      $rootScope.serverip = server;
+                      //$rootScope.consultant = consultant;
+                      $rootScope.customer = barcode;
+                      //$rootScope.serverip = server;
 
                       $location.path("/Camera");
                   }
@@ -50,26 +50,20 @@
 
     $scope.login = function () {
 
-        //alert("call web api");
-        //alert($scope.loginData.UserId);
-        authService.login($scope.loginData).then(function (response) {
+       
+    authService.login($scope.loginData).then(function (response) {
+       
+    if (response.isExist == false) {
+           alert("User Not  Exists");
+              
+      }
+    else {
+                
+          $rootScope.customer =$scope.loginData.CustomerID;
+          $location.path("/Camera");
+         }
 
-//            if (response.isExist == true) {
-//                $location.path("/Camera");
-//            }
-//            else {
-//                alert("User Not Exists");
-//            }
-
-    if (response != null) {
-                $location.path("/Camera");
-            }
-            else {
-                alert("User Not Exists");
-            }
-
-        },
-         function (err) {
+     },function (err) {
              $scope.message = err.error_description;
              alert($scope.message);
          });
