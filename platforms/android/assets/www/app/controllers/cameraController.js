@@ -4,7 +4,7 @@
     $scope.serverip = $rootScope.serverip;
 
     $scope.capturePhoto = function (taken_for) {
-
+       
         //        alert("test");
         //        $scope.test = "testing camera...";
         //        alert($scope.test);
@@ -19,8 +19,8 @@
     function onSuccess(imageData) {
 
         // $scope.$apply(function () {
-
-
+        $scope.showDialog = "yes";
+      
         //var image = imageData.toDataURL({ format: 'jpeg', quality: 0.9 });
 
         var image = "data:image/jpeg;base64," + imageData;
@@ -74,10 +74,12 @@
             contentType: 'application/json; charset=utf-8',
             type: 'POST',
             success: function (data, status, jqXHR) {
-
+                $scope.showDialog = "";
                 alert("image upload successfully.");
+              
             },
             error: function (jqXHR, status, err) {
+                $scope.showDialog = "";
                 alert("Error upload image");
             }
 
@@ -95,4 +97,36 @@
     }
 
 
+});
+
+cameraApp.directive("modalShow", function ($parse) {
+    return {
+        restrict: "A",
+        link: function (scope, element, attrs) {
+
+            //Hide or show the modal
+            scope.showModal = function (visible, elem) {
+                if (!elem)
+                    elem = element;
+
+                if (visible)
+                    $(elem).modal("show");
+                else
+                    $(elem).modal("hide");
+            }
+
+            //Watch for changes to the modal-visible attribute
+            scope.$watch(attrs.modalShow, function (newValue, oldValue) {
+                scope.showModal(newValue, attrs.$$element);
+            });
+
+            //Update the visible value when the dialog is closed through UI actions (Ok, cancel, etc.)
+            $(element).bind("hide.bs.modal", function () {
+                $parse(attrs.modalShow).assign(scope, false);
+                if (!scope.$$phase && !scope.$root.$$phase)
+                    scope.$apply();
+            });
+        }
+
+    };
 });
