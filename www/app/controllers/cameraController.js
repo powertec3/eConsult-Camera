@@ -4,7 +4,7 @@
     $scope.serverip = $rootScope.serverip;
 
     $scope.capturePhoto = function (taken_for) {
-       
+      
         //        alert("test");
         //        $scope.test = "testing camera...";
         //        alert($scope.test);
@@ -110,7 +110,8 @@ cameraApp.directive("modalShow", function ($parse) {
                     elem = element;
 
                 if (visible)
-                    $(elem).modal("show");
+                   // $(elem).modal("show");
+                     $(elem).appendTo('body').modal("show")
                 else
                     $(elem).modal("hide");
             }
