@@ -50,7 +50,7 @@
 
     $scope.login = function () {
 
-       
+       alert("login");
     authService.login($scope.loginData).then(function (response) {
        
     if (response.isExist == false) {
