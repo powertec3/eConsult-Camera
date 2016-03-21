@@ -19,6 +19,21 @@ cameraApp.config(function ($routeProvider, $locationProvider) {
              //controller: 'HomeCtrl'
              controller: 'scanController'
          })
+         .when('/Main', {
+             templateUrl: 'app/views/main.html',
+             //controller: 'HomeCtrl'
+             controller: 'mainController'
+         })
+          .when('/Browse', {
+              templateUrl: 'app/views/browseImages.html',
+              //controller: 'HomeCtrl'
+              controller: 'browseImagesController'
+          })
+            .when('/Session', {
+                templateUrl: 'app/views/session.html',
+                //controller: 'HomeCtrl'
+                controller: 'sessionController'
+            })
         
     .otherwise({
         templateUrl: 'app/views/scan.html',
@@ -37,6 +52,7 @@ cameraApp.run(function ($rootScope) {
     $rootScope.consultant = '';
     $rootScope.customer = '';
     $rootScope.serverip = 'http://172.0.6.168:8080/save_camera_image';
+    $rootScope.client = '';
 });
 
 //var serviceBase = 'http://testsvr.eurogrp.com:8006/';

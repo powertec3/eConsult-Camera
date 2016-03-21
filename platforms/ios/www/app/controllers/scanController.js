@@ -10,7 +10,7 @@
 
   $scope.loginData = {
        CompanyID: "SG01",
-       CustomerID: "",
+       CustomerID: "CNX1",
         
     };
 
@@ -35,7 +35,7 @@
                       $rootScope.customer = customer;
                       $rootScope.serverip = server;
 
-                      $location.path("/Camera");
+                      $location.path("/Main");
                   }
                   catch (err) {
                       alert("Error getting barcode");
@@ -50,7 +50,7 @@
 
     $scope.login = function () {
 
-       alert("login");
+      
     authService.login($scope.loginData).then(function (response) {
        
     if (response.isExist == false) {
@@ -60,7 +60,7 @@
     else {
                 
           $rootScope.customer =$scope.loginData.CustomerID;
-          $location.path("/Camera");
+          $location.path("/Main");
          }
 
      },function (err) {

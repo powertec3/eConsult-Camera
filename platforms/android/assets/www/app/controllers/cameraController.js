@@ -68,7 +68,7 @@
 
         $.ajax({
             //url: ngAuthSettings.uploadServiceUri,
-            url: $scope.serverip,
+            url: $rootScope.imageuploadip,
             async: true,
             data: JSON.stringify(clientimage),
             contentType: 'application/json; charset=utf-8',

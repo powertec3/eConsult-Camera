@@ -9,8 +9,8 @@
     //    };
 
   $scope.loginData = {
-       CompanyID: "SG01",
-       CustomerID: "",
+       CompanyID: "",
+       CustomerID: "CNX1",
         
     };
 
@@ -26,16 +26,22 @@
                   try {
                       var barcode = result.text;
                       var code = barcode.split(";");
-                      var consultant = code[0];
-                      var customer = code[1];
-                      var server = code[2];
+                      var brandcode = code[0];
+                      var brandid = code[1];
+                      var consultant = code[2];
+                      var customer = code[3];
+                      var imageuploadip = code[4];
+                      var gigatronserviceip = code[5];
 
                       //alert(consultant + " " + customer + " " + server);
+                      $rootScope.brandcode = brandcode;
+                      $rootScope.brandid = brandid;
                       $rootScope.consultant = consultant;
                       $rootScope.customer = customer;
-                      $rootScope.serverip = server;
+                      $rootScope.imageuploadip = imageuploadip;
+                      $rootScope.gigatronserviceip = gigatronserviceip;
 
-                      $location.path("/Camera");
+                      $location.path("/Main");
                   }
                   catch (err) {
                       alert("Error getting barcode");
@@ -50,7 +56,8 @@
 
     $scope.login = function () {
 
-       alert("login");
+        //$scope.loginData.CompanyID = $rootScope.brandid
+        $scope.loginData.CompanyID = "SG01";
     authService.login($scope.loginData).then(function (response) {
        
     if (response.isExist == false) {
@@ -60,7 +67,7 @@
     else {
                 
           $rootScope.customer =$scope.loginData.CustomerID;
-          $location.path("/Camera");
+          $location.path("/Main");
          }
 
      },function (err) {

@@ -48,7 +48,31 @@ cameraApp.factory('authService', ['$http', '$q', 'ngAuthSettings', function ($ht
 
 
     };
+
+
+     var _httpGet = function (serviceURL, parameters) {
+        var deferred = $q.defer();
+
+      
+
+        $http({
+            url: serviceURL,
+            method: "GET",
+            params: parameters
+        }).success(function (response) {
+            deferred.resolve(response);
+        }).error(function (err, status) {
+            deferred.reject(err);
+            //console.log(err);
+            //alert(err);
+        });
+        return deferred.promise;
+    }
+
+
     authServiceFactory.login = _login;
+    authServiceFactory.httpGet = _httpGet;
+
 
     return authServiceFactory;
 }]);
