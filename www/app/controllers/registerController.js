@@ -1,18 +1,5 @@
-﻿cameraApp.controller('scanController', ['$scope', 'authService', '$http', '$location', '$rootScope', function ($scope, authService, $http, $location, $rootScope) {
+﻿cameraApp.controller('registerController', ['$scope', 'authService', '$http', '$location', '$rootScope', function ($scope, authService, $http, $location, $rootScope) {
 
-
-
-//    $scope.loginData = {
-//        UserId: "",
-//        Password: "",
-//        
-    //    };
-
-  $scope.loginData = {
-       CompanyID: "",
-       CustomerID: "CNX1",
-        
-    };
 
     $scope.message = "";
 
@@ -58,32 +45,38 @@
        );
     }
 
-    writeToLocalFile()
-    {
+  
 
+   writeToLocalFile = function () {
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotWriteFileSystem, WriteFileSystemFail);
     }
 
-    $scope.login = function () {
+    var gotWriteFileSystem = function (fileSystem) {
 
-        //$scope.loginData.CompanyID = $rootScope.brandid
-        $scope.loginData.CompanyID = "SG01";
-    authService.loginCustomer($scope.loginData).then(function (response) {
-       
-    if (response.isExist == false) {
-           alert("User Not  Exists");
-              
-      }
-    else {
-                
-          $rootScope.customer =$scope.loginData.CustomerID;
-          $location.path("/Main");
-         }
+        var spath = fileSystem.root.toURL() + "/" + "register.txt"
+        fileSystem.root.getFile("setting.txt", { create: false, exclusive: false }, gotWriteFileEntry, WriteFileEntryFail);
+    }
 
-     },function (err) {
-             $scope.message = err.error_description;
-             alert($scope.message);
-         });
+    var WriteFileSystemFail = function (error) {
+        console.log("Error File System");
+    }
 
-    };
+    var gotWriteFileEntry = function (fileEntry) {
+        fileEntry.createWriter(writeFile, writeFail)
+    }
 
-} ]);
+    var WriteFileEntryFail = function (error) {
+        console.log("Error File Entry");
+    }
+
+    var writeFile = function (writer) {
+        writer.truncate(0)
+        writer.write($scope.register);
+    }
+
+    var writeFail = function (error) {
+        console.log("Error Write File");
+    }
+
+
+}]);

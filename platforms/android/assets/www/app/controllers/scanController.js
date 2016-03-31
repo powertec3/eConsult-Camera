@@ -32,6 +32,7 @@
                       var customer = code[3];
                       var imageuploadip = code[4];
                       var gigatronserviceip = code[5];
+                      var aesloginip = code[6];
 
                       //alert(consultant + " " + customer + " " + server);
                       $rootScope.brandcode = brandcode;
@@ -40,6 +41,9 @@
                       $rootScope.customer = customer;
                       $rootScope.imageuploadip = imageuploadip;
                       $rootScope.gigatronserviceip = gigatronserviceip;
+                      $rootScope.aesloginip = aesloginip;
+
+                      writeToLocalFile();
 
                       $location.path("/Main");
                   }
@@ -54,11 +58,16 @@
        );
     }
 
+    writeToLocalFile()
+    {
+
+    }
+
     $scope.login = function () {
 
         //$scope.loginData.CompanyID = $rootScope.brandid
         $scope.loginData.CompanyID = "SG01";
-    authService.login($scope.loginData).then(function (response) {
+    authService.loginCustomer($scope.loginData).then(function (response) {
        
     if (response.isExist == false) {
            alert("User Not  Exists");

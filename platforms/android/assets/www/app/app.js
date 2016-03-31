@@ -4,9 +4,9 @@ var cameraApp = angular.module('cameraApp', ['ngRoute']);
 cameraApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/Home', {
-            templateUrl: 'app/views/scan.html',
+            templateUrl: 'app/views/login.html',
             //controller: 'HomeCtrl'
-            controller: 'scanController'
+            controller: 'loginController'
         })
 
          .when('/Camera', {
@@ -36,9 +36,9 @@ cameraApp.config(function ($routeProvider, $locationProvider) {
             })
         
     .otherwise({
-        templateUrl: 'app/views/scan.html',
+        templateUrl: 'app/views/login.html',
         //controller: 'HomeCtrl'
-        controller: 'scanController'
+        controller: 'loginController'
     });
 
    
@@ -49,11 +49,16 @@ cameraApp.config(function ($routeProvider, $locationProvider) {
 
 
 cameraApp.run(function ($rootScope) {
+    $rootScope.client = '';
+
+    $rootScope.brandcode = 'NYSS';
+    $rootScope.brandid = 'SG01';
     $rootScope.consultant = '';
     $rootScope.customer = '';
-    $rootScope.serverip = 'http://172.0.6.168:8080/save_camera_image';
-    $rootScope.client = '';
-    $rootScope.gigatronserviceip='http://localhost:1337/clients';
+    //$rootScope.serverip = 'http://172.0.6.168:8080/save_camera_image';
+    $rootScope.imageuploadip = 'http://172.0.6.168:8080/save_camera_image';
+    $rootScope.gigatronserviceip = 'http://localhost:1337/clients';
+    $rootScope.aesloginip = 'http://192.168.1.99:8006/';
 });
 
 //var serviceBase = 'http://testsvr.eurogrp.com:8006/';
