@@ -14,7 +14,7 @@ function ($compile, $q, $location, authService, $rootScope) {
 
                     scope.sessionCount = scope.clientDetails[0].sessions.length;
 
-                
+                    alert(scope.sessionCount);
 
                 scope.sessionCount = attrs.sessions;
                 scope.cols = attrs.cols;
