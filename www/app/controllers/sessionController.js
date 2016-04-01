@@ -12,7 +12,7 @@
         $scope.clientDetails = clientJSON;
 
         $scope.sessionCount = $scope.clientDetails[0].sessions.length;
-
+        alert($scope.sessionCount);
     });
 
 
