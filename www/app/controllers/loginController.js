@@ -3,8 +3,8 @@
 
 
     $scope.loginData = {
-        UserId: "",
-        Password: ""
+        UserId: "NX1",
+        Password: "123456"
     };
 
     $scope.message = "";
@@ -83,15 +83,15 @@
 
     $scope.login = function () {
 
-        alert("call web api");
-        alert($scope.loginData.UserId);
+        //alert("call web api");
+        //alert($scope.loginData.UserId);
         authService.loginConsultant($scope.loginData).then(function (response) {
 
-            if (response.isExist == true) {
-                $location.path("/scan");
+            if (response.data.isExist == true) {
+                $location.path("/Client");
             }
             else {
-                alert("Consultant Not Exists");
+                alert("Consultant: " + $scope.loginData.UserId + " Not Exists");
             }
 
         },

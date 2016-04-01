@@ -14,10 +14,10 @@ cameraApp.config(function ($routeProvider, $locationProvider) {
              //controller: 'HomeCtrl'
              controller: 'cameraController'
          })
-         .when('/Scan', {
-             templateUrl: 'app/views/scan.html',
+         .when('/Client', {
+             templateUrl: 'app/views/client.html',
              //controller: 'HomeCtrl'
-             controller: 'scanController'
+             controller: 'clientController'
          })
          .when('/Main', {
              templateUrl: 'app/views/main.html',

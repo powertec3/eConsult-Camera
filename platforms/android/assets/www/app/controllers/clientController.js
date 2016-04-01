@@ -1,4 +1,4 @@
-﻿cameraApp.controller('scanController', ['$scope', 'authService', '$http', '$location', '$rootScope', function ($scope, authService, $http, $location, $rootScope) {
+﻿cameraApp.controller('clientController', ['$scope', 'authService', '$http', '$location', '$rootScope', function ($scope, authService, $http, $location, $rootScope) {
 
 
 
@@ -43,7 +43,7 @@
                       $rootScope.gigatronserviceip = gigatronserviceip;
                       $rootScope.aesloginip = aesloginip;
 
-                      writeToLocalFile();
+                      
 
                       $location.path("/Main");
                   }
@@ -58,10 +58,7 @@
        );
     }
 
-    writeToLocalFile()
-    {
-
-    }
+ 
 
     $scope.login = function () {
 

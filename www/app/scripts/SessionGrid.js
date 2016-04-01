@@ -33,7 +33,7 @@ function ($compile, $q, $location, authService, $rootScope) {
                       
                         var cell = angular.element("<td>").attr("Id", row + "-" + col);
                         var id = session--;
-                        var button = angular.element("<button>").attr("Id", id).text("Session " + id);
+                        var button = angular.element("<button>").attr("Id", id).text( id);
                         button.attr('ng-click', 'showSession($event)');
                         cell.append(button);
                        rowElem.append(cell);
@@ -51,7 +51,7 @@ function ($compile, $q, $location, authService, $rootScope) {
                        
                         var cell = angular.element("<td>").attr("Id", row + "-" + col);
                         var id = session--;
-                        var button = angular.element("<button>").attr("Id", id).text("Session " + id);
+                        var button = angular.element("<button>").attr("Id", id).text( id);
                         button.attr('ng-click', 'showSession($event)');
                         cell.append(button);
                         rowElem.append(cell);
