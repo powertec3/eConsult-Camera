@@ -6,13 +6,13 @@ cameraApp.factory('authService', ['$http', '$q', 'ngAuthSettings', function ($ht
     var authServiceFactory = {};
 
    
-    var _loginOLD = function (loginData) {
+    var _loginConsultant = function (loginData) {
 
         //alert("http.post");
         var deferred = $q.defer();
       
-        //$http.post(serviceBase + 'api/Login', loginData).then(function (response) {
-        $http.post(serviceBase + 'api/NYSS/Customer/fnGetCustomerDetails', loginData).then(function (response) {
+        $http.post(serviceBase + 'api/Login', loginData).then(function (response) {
+       
             //alert(response);
             deferred.resolve(response);
 
@@ -25,7 +25,7 @@ cameraApp.factory('authService', ['$http', '$q', 'ngAuthSettings', function ($ht
 
     };
 
-    var _login = function (loginData) {
+    var _loginCustomer = function (loginData) {
 
         //alert("http.post");
         var deferred = $q.defer();
@@ -70,8 +70,9 @@ cameraApp.factory('authService', ['$http', '$q', 'ngAuthSettings', function ($ht
     }
 
 
-    authServiceFactory.login = _login;
-    authServiceFactory.httpGet = _httpGet;
+     authServiceFactory.loginCustomer = _loginCustomer;
+     authServiceFactory.loginConsultant = _loginConsultant;
+     authServiceFactory.httpGet = _httpGet;
 
 
     return authServiceFactory;

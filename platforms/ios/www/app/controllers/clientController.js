@@ -1,4 +1,4 @@
-﻿cameraApp.controller('scanController', ['$scope', 'authService', '$http', '$location', '$rootScope', function ($scope, authService, $http, $location, $rootScope) {
+﻿cameraApp.controller('clientController', ['$scope', 'authService', '$http', '$location', '$rootScope', function ($scope, authService, $http, $location, $rootScope) {
 
 
 
@@ -9,7 +9,7 @@
     //    };
 
   $scope.loginData = {
-       CompanyID: "SG01",
+       CompanyID: "",
        CustomerID: "CNX1",
         
     };
@@ -26,14 +26,24 @@
                   try {
                       var barcode = result.text;
                       var code = barcode.split(";");
-                      var consultant = code[0];
-                      var customer = code[1];
-                      var server = code[2];
+                      var brandcode = code[0];
+                      var brandid = code[1];
+                      var consultant = code[2];
+                      var customer = code[3];
+                      var imageuploadip = code[4];
+                      var gigatronserviceip = code[5];
+                      var aesloginip = code[6];
 
                       //alert(consultant + " " + customer + " " + server);
+                      $rootScope.brandcode = brandcode;
+                      $rootScope.brandid = brandid;
                       $rootScope.consultant = consultant;
                       $rootScope.customer = customer;
-                      $rootScope.serverip = server;
+                      $rootScope.imageuploadip = imageuploadip;
+                      $rootScope.gigatronserviceip = gigatronserviceip;
+                      $rootScope.aesloginip = aesloginip;
+
+                      
 
                       $location.path("/Main");
                   }
@@ -48,10 +58,13 @@
        );
     }
 
+ 
+
     $scope.login = function () {
 
-      
-    authService.login($scope.loginData).then(function (response) {
+        //$scope.loginData.CompanyID = $rootScope.brandid
+        $scope.loginData.CompanyID = "SG01";
+    authService.loginCustomer($scope.loginData).then(function (response) {
        
     if (response.isExist == false) {
            alert("User Not  Exists");
