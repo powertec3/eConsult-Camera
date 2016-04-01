@@ -39,6 +39,9 @@
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		79D562D644EF4E078C172654 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BDFD92F0347E798668655 /* CDVFile.m */; };
+		9202E5C551AF4EF5B8845985 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AC00CD5EFC4F43BB6C07A5 /* CDVLocalFilesystem.m */; };
+		75AC58B9AB674961AB563FEF /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D39EAEAA33CD420989AD0374 /* CDVAssetLibraryFilesystem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,12 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "eConsult Camera/config.xml"; sourceTree = "<group>"; };
+		1C6BDFD92F0347E798668655 /* CDVFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVFile.m"; path = "org.apache.cordova.file/CDVFile.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		77AC00CD5EFC4F43BB6C07A5 /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocalFilesystem.m"; path = "org.apache.cordova.file/CDVLocalFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		D39EAEAA33CD420989AD0374 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVAssetLibraryFilesystem.m"; path = "org.apache.cordova.file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		1B3FD8A3AC4E4B9BB639C53A /* CDVFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVFile.h"; path = "org.apache.cordova.file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		46371EF9C1DA4DB09EB6FF38 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocalFilesystem.h"; path = "org.apache.cordova.file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		AD3314B331D34769966B337D /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVAssetLibraryFilesystem.h"; path = "org.apache.cordova.file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +211,12 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				1C6BDFD92F0347E798668655 /* CDVFile.m */,
+				77AC00CD5EFC4F43BB6C07A5 /* CDVLocalFilesystem.m */,
+				D39EAEAA33CD420989AD0374 /* CDVAssetLibraryFilesystem.m */,
+				1B3FD8A3AC4E4B9BB639C53A /* CDVFile.h */,
+				46371EF9C1DA4DB09EB6FF38 /* CDVLocalFilesystem.h */,
+				AD3314B331D34769966B337D /* CDVAssetLibraryFilesystem.h */,
 			);
 			name = Plugins;
 			path = "eConsult Camera/Plugins";
@@ -386,6 +401,9 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				79D562D644EF4E078C172654 /* CDVFile.m in Sources */,
+				9202E5C551AF4EF5B8845985 /* CDVLocalFilesystem.m in Sources */,
+				75AC58B9AB674961AB563FEF /* CDVAssetLibraryFilesystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
