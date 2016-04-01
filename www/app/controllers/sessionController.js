@@ -5,8 +5,10 @@
 
 
     //http://localhost:1337/clients
+    alert($rootScope.gigatronserviceip);
     authService.httpGet($rootScope.gigatronserviceip, { "client_name": $scope.customerId }).then(function (clientJSON) {
         $rootScope.client = clientJSON;
+        alert(clientJSON);
         $scope.clientDetails = clientJSON;
 
         $scope.sessionCount = $scope.clientDetails[0].sessions.length;
