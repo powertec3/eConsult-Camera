@@ -57,7 +57,7 @@ cameraApp.run(function ($rootScope) {
     $rootScope.customer = '';
     //$rootScope.serverip = 'http://172.0.6.168:8080/save_camera_image';
     $rootScope.imageuploadip = 'http://172.0.6.168:8080/save_camera_image';
-    $rootScope.gigatronserviceip = 'http://localhost:1337/clients';
+    $rootScope.gigatronserviceip = 'http://172.0.2.85:1337/clients';
     $rootScope.aesloginip = 'http://192.168.1.99:8006/';
 });
 
