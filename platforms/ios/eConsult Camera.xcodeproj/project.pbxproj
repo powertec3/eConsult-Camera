@@ -42,6 +42,7 @@
 		79D562D644EF4E078C172654 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BDFD92F0347E798668655 /* CDVFile.m */; };
 		9202E5C551AF4EF5B8845985 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AC00CD5EFC4F43BB6C07A5 /* CDVLocalFilesystem.m */; };
 		75AC58B9AB674961AB563FEF /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D39EAEAA33CD420989AD0374 /* CDVAssetLibraryFilesystem.m */; };
+		2D1F1C623C764660BAC53688 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E9267BFC3D804F70B4C3F646 /* CDVLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		1B3FD8A3AC4E4B9BB639C53A /* CDVFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVFile.h"; path = "org.apache.cordova.file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		46371EF9C1DA4DB09EB6FF38 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocalFilesystem.h"; path = "org.apache.cordova.file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		AD3314B331D34769966B337D /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVAssetLibraryFilesystem.h"; path = "org.apache.cordova.file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E9267BFC3D804F70B4C3F646 /* CDVLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLogger.m"; path = "org.apache.cordova.console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		9B5705FAA6E14417B81A12A1 /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,8 @@
 				1B3FD8A3AC4E4B9BB639C53A /* CDVFile.h */,
 				46371EF9C1DA4DB09EB6FF38 /* CDVLocalFilesystem.h */,
 				AD3314B331D34769966B337D /* CDVAssetLibraryFilesystem.h */,
+				E9267BFC3D804F70B4C3F646 /* CDVLogger.m */,
+				9B5705FAA6E14417B81A12A1 /* CDVLogger.h */,
 			);
 			name = Plugins;
 			path = "eConsult Camera/Plugins";
@@ -404,6 +409,7 @@
 				79D562D644EF4E078C172654 /* CDVFile.m in Sources */,
 				9202E5C551AF4EF5B8845985 /* CDVLocalFilesystem.m in Sources */,
 				75AC58B9AB674961AB563FEF /* CDVAssetLibraryFilesystem.m in Sources */,
+				2D1F1C623C764660BAC53688 /* CDVLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,7 @@
 
                       writeToLocalFile();
 
-                      $location.path("/Main");
+                      $location.path("/Home");
                   }
                   catch (err) {
                       alert("Error getting barcode");

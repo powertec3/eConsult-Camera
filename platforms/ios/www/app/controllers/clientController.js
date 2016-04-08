@@ -16,47 +16,47 @@
 
     $scope.message = "";
 
-    $scope.scanQR = function () {
-        alert("scan starting...");
-        cordova.plugins.barcodeScanner.scan(
-          function (result) {
+    //$scope.scanQR = function () {
+    //    alert("scan starting...");
+    //    cordova.plugins.barcodeScanner.scan(
+    //      function (result) {
 
 
-              if (result.cancelled == false) {
-                  try {
-                      var barcode = result.text;
-                      var code = barcode.split(";");
-                      var brandcode = code[0];
-                      var brandid = code[1];
-                      var consultant = code[2];
-                      var customer = code[3];
-                      var imageuploadip = code[4];
-                      var gigatronserviceip = code[5];
-                      var aesloginip = code[6];
+    //          if (result.cancelled == false) {
+    //              try {
+    //                  var barcode = result.text;
+    //                  var code = barcode.split(";");
+    //                  var brandcode = code[0];
+    //                  var brandid = code[1];
+    //                  var consultant = code[2];
+    //                  var customer = code[3];
+    //                  var imageuploadip = code[4];
+    //                  var gigatronserviceip = code[5];
+    //                  var aesloginip = code[6];
 
-                      //alert(consultant + " " + customer + " " + server);
-                      $rootScope.brandcode = brandcode;
-                      $rootScope.brandid = brandid;
-                      $rootScope.consultant = consultant;
-                      $rootScope.customer = customer;
-                      $rootScope.imageuploadip = imageuploadip;
-                      $rootScope.gigatronserviceip = gigatronserviceip;
-                      $rootScope.aesloginip = aesloginip;
+    //                  //alert(consultant + " " + customer + " " + server);
+    //                  $rootScope.brandcode = brandcode;
+    //                  $rootScope.brandid = brandid;
+    //                  $rootScope.consultant = consultant;
+    //                  $rootScope.customer = customer;
+    //                  $rootScope.imageuploadip = imageuploadip;
+    //                  $rootScope.gigatronserviceip = gigatronserviceip;
+    //                  $rootScope.aesloginip = aesloginip;
 
                       
 
-                      $location.path("/Main");
-                  }
-                  catch (err) {
-                      alert("Error getting barcode");
-                  }
-              }
-          },
-          function (error) {
-              alert("Scanning failed: " + error);
-          }
-       );
-    }
+    //                  $location.path("/Main");
+    //              }
+    //              catch (err) {
+    //                  alert("Error getting barcode");
+    //              }
+    //          }
+    //      },
+    //      function (error) {
+    //          alert("Scanning failed: " + error);
+    //      }
+    //   );
+    //}
 
  
 
