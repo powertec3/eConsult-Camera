@@ -27,10 +27,14 @@ function ($compile, $q, $location, authService, $rootScope) {
                 tableElem.attr('border', '1');
                    
                 var session = scope.sessionCount;
+                alert("session:" + session);
+
+
                 for (var row = scope.rows; row > 0; row--) {
+                    alert("row:" + row);
                     var rowElem = angular.element("<tr>");
                     for (var col = scope.cols; col > 0; col--) {
-                      
+                        alert("col:" + col);
                         var cell = angular.element("<td>").attr("Id", row + "-" + col);
                         var id = session--;
                         var button = angular.element("<button>").attr("Id", id).text( id);
