@@ -5,14 +5,14 @@
 
 
     //http://localhost:1337/clients
-    alert($rootScope.gigatronserviceip);
+   // alert($rootScope.gigatronserviceip);
     authService.httpGet($rootScope.gigatronserviceip, { "client_name": $scope.customerId }).then(function (clientJSON) {
         $rootScope.client = clientJSON;
-        alert(clientJSON);
+       // alert(clientJSON);
         $scope.clientDetails = clientJSON;
 
         $scope.sessionCount = $scope.clientDetails[0].sessions.length;
-        alert($scope.sessionCount);
+        //alert($scope.sessionCount);
     });
 
 

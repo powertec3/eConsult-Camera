@@ -50,12 +50,29 @@
        
         <script src="js/vendor/google-code-prettify/prettify.js"></script>    
         <script type="text/javascript" charset="utf-8">
-        function onLoad() {
-          document.addEventListener("deviceready", onDeviceReady, false);
+            function onLoad() {
+                //alert('onload');
+                var savedTime;
+                //var localStorage = window.localStorage;
+                document.addEventListener("deviceready", onDeviceReady, false);
+                //alert('onload complete');
         }
 
         function onDeviceReady() {
-          //alert ('ready');
+            alert ('ready');
+            document.addEventListener("pause", onPause, false);
+            document.addEventListener("resume", onResume, false);
+            cordova.plugins.notification.badge.set(10);
+        }
+
+        function onPause() {
+            //alert('pause');
+            navigator.notification.beep(1);
+            cordova.plugins.notification.badge.set(10);
+        }
+        function onResume() {
+            alert('resume');
+            //cordova.plugins.notification.badge.clear();
         }
     </script>
 
@@ -74,7 +91,7 @@
         <center><div ng-view></div></center>
     </div>
     
-    <script type="text/javascript" src="js/index.js"></script>
+    <!--<script type="text/javascript" src="js/index.js"></script>-->
     <script type="text/javascript" src="app/app.js"></script>
     <script src="app/controllers/cameraController.js"></script>
     <script src="app/controllers/clientController.js"></script>
@@ -86,9 +103,9 @@
     <script src="app/services/authService.js"></script>
     <script src="app/scripts/sessionGrid.js"></script>
     <script src="app/scripts/imageGrid.js"></script>
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         app.initialize();
-    </script>
+    </script>-->
 
 </body>
 

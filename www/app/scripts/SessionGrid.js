@@ -14,7 +14,7 @@ function ($compile, $q, $location, authService, $rootScope) {
 
                     scope.sessionCount = scope.clientDetails[0].sessions.length;
 
-                    alert(scope.sessionCount);
+                    //alert("session:" + scope.sessionCount);
 
                 scope.sessionCount = attrs.sessions;
                 scope.cols = attrs.cols;
@@ -23,21 +23,24 @@ function ($compile, $q, $location, authService, $rootScope) {
 
                 var divScroll = angular.element("<div class ='divscroll'>");
                     
-                var tableElem = angular.element("<table>");
-                tableElem.attr('border', '1');
+                var tableElem = angular.element("<table width='100%'>");
+                tableElem.attr('border', '1'); 
                    
                 var session = scope.sessionCount;
-                alert("session:" + session);
+                //alert("session:" + session);
 
 
                 for (var row = scope.rows; row > 0; row--) {
-                    alert("row:" + row);
+                    //alert("row:" + row);
                     var rowElem = angular.element("<tr>");
                     for (var col = scope.cols; col > 0; col--) {
-                        alert("col:" + col);
-                        var cell = angular.element("<td>").attr("Id", row + "-" + col);
+                        //alert("col:" + col);
+                        var cell = angular.element("<td width='25%'>").attr("Id", row + "-" + col);
                         var id = session--;
-                        var button = angular.element("<button>").attr("Id", id).text( id);
+                        var button = angular.element("<button>").attr("Id", id).text(id);
+                        //button.attr('width', '20%');
+                        //button.attr('height', '10%');
+
                         button.attr('ng-click', 'showSession($event)');
                         cell.append(button);
                        rowElem.append(cell);

@@ -11,10 +11,12 @@
     <plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="org.apache.cordova.camera" version="0.3.2" />
     <plugin name="phonegap-plugin-barcodescanner"  version="4.0.2" />
+    <plugin name="cordova.plugin.badge"  version="0.7.2"/>
   <feature name="File">
     <param name="ios-package" value="CDVFile" />
   </feature>
-
+  <preference name="KeepRunning" value="true" />
+  
   <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
