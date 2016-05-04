@@ -43,6 +43,10 @@
 		9202E5C551AF4EF5B8845985 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AC00CD5EFC4F43BB6C07A5 /* CDVLocalFilesystem.m */; };
 		75AC58B9AB674961AB563FEF /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D39EAEAA33CD420989AD0374 /* CDVAssetLibraryFilesystem.m */; };
 		2D1F1C623C764660BAC53688 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E9267BFC3D804F70B4C3F646 /* CDVLogger.m */; };
+		791699FCAF244B0DBF2D7A89 /* AppDelegate+APPAppEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A7A8E7F64542A4870FF9E0 /* AppDelegate+APPAppEvent.m */; };
+		6B1C2C6920754843BE20BC1E /* CDVPlugin+APPAppEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E0EC8F4E9641109E4848DC /* CDVPlugin+APPAppEvent.m */; };
+		1B4D3BC88EAD4BA4AA9AE5C8 /* APPBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A19A76848B7460C9CBFD43A /* APPBadge.m */; };
+		1FA7B59C1C324E23823D9913 /* UIApplication+APPBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 566A56EF6892405B81FA9D97 /* UIApplication+APPBadge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,15 @@
 		AD3314B331D34769966B337D /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVAssetLibraryFilesystem.h"; path = "org.apache.cordova.file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		E9267BFC3D804F70B4C3F646 /* CDVLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLogger.m"; path = "org.apache.cordova.console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		9B5705FAA6E14417B81A12A1 /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		D4A7A8E7F64542A4870FF9E0 /* AppDelegate+APPAppEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+APPAppEvent.m"; path = "cordova-plugin-app-event/AppDelegate+APPAppEvent.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		41E0EC8F4E9641109E4848DC /* CDVPlugin+APPAppEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVPlugin+APPAppEvent.m"; path = "cordova-plugin-app-event/CDVPlugin+APPAppEvent.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		6986B1FB12224D278BE63F0C /* AppDelegate+APPAppEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+APPAppEvent.h"; path = "cordova-plugin-app-event/AppDelegate+APPAppEvent.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		DC3492211E054966B71B2BC0 /* CDVPlugin+APPAppEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVPlugin+APPAppEvent.h"; path = "cordova-plugin-app-event/CDVPlugin+APPAppEvent.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		AFBE789E275A48A9A0F213CB /* APPAppEventDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "APPAppEventDelegate.h"; path = "cordova-plugin-app-event/APPAppEventDelegate.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		2A19A76848B7460C9CBFD43A /* APPBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "APPBadge.m"; path = "cordova-plugin-badge/APPBadge.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		566A56EF6892405B81FA9D97 /* UIApplication+APPBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+APPBadge.m"; path = "cordova-plugin-badge/UIApplication+APPBadge.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		DE02B94F9F154CB9AD046A14 /* APPBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "APPBadge.h"; path = "cordova-plugin-badge/APPBadge.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E2EEAE9F17354B8BACEFD27B /* UIApplication+APPBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIApplication+APPBadge.h"; path = "cordova-plugin-badge/UIApplication+APPBadge.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +235,15 @@
 				AD3314B331D34769966B337D /* CDVAssetLibraryFilesystem.h */,
 				E9267BFC3D804F70B4C3F646 /* CDVLogger.m */,
 				9B5705FAA6E14417B81A12A1 /* CDVLogger.h */,
+				D4A7A8E7F64542A4870FF9E0 /* AppDelegate+APPAppEvent.m */,
+				41E0EC8F4E9641109E4848DC /* CDVPlugin+APPAppEvent.m */,
+				6986B1FB12224D278BE63F0C /* AppDelegate+APPAppEvent.h */,
+				DC3492211E054966B71B2BC0 /* CDVPlugin+APPAppEvent.h */,
+				AFBE789E275A48A9A0F213CB /* APPAppEventDelegate.h */,
+				2A19A76848B7460C9CBFD43A /* APPBadge.m */,
+				566A56EF6892405B81FA9D97 /* UIApplication+APPBadge.m */,
+				DE02B94F9F154CB9AD046A14 /* APPBadge.h */,
+				E2EEAE9F17354B8BACEFD27B /* UIApplication+APPBadge.h */,
 			);
 			name = Plugins;
 			path = "eConsult Camera/Plugins";
@@ -410,6 +432,10 @@
 				9202E5C551AF4EF5B8845985 /* CDVLocalFilesystem.m in Sources */,
 				75AC58B9AB674961AB563FEF /* CDVAssetLibraryFilesystem.m in Sources */,
 				2D1F1C623C764660BAC53688 /* CDVLogger.m in Sources */,
+				791699FCAF244B0DBF2D7A89 /* AppDelegate+APPAppEvent.m in Sources */,
+				6B1C2C6920754843BE20BC1E /* CDVPlugin+APPAppEvent.m in Sources */,
+				1B4D3BC88EAD4BA4AA9AE5C8 /* APPBadge.m in Sources */,
+				1FA7B59C1C324E23823D9913 /* UIApplication+APPBadge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

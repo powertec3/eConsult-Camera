@@ -185,6 +185,14 @@ module.exports = [
             "cordova"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-badge/www/badge.js",
+        "id": "cordova-plugin-badge.Badge",
+        "clobbers": [
+            "plugin.notification.badge",
+            "cordova.plugins.notification.badge"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -194,7 +202,9 @@ module.exports.metadata =
     "org.apache.cordova.camera": "0.3.6",
     "phonegap-plugin-barcodescanner": "4.0.2",
     "org.apache.cordova.file": "1.3.3",
-    "org.apache.cordova.console": "0.2.13"
+    "org.apache.cordova.console": "0.2.13",
+    "cordova-plugin-badge": "0.7.2",
+    "cordova-plugin-app-event": "1.2.0"
 }
 // BOTTOM OF METADATA
 });
