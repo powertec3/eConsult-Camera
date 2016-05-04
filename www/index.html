@@ -62,18 +62,25 @@
             alert ('ready');
             document.addEventListener("pause", onPause, false);
             document.addEventListener("resume", onResume, false);
-            cordova.plugins.notification.badge.set(10);
+            //cordova.plugins.notification.badge.set(10);
         }
 
-        function onPause() {
-            alert('pause');
-            //navigator.notification.beep(1);
-            cordova.plugins.notification.badge.set(10);
-        }
+        //function onPause() {
+        //    alert('pause');
+        //    //navigator.notification.beep(1);
+        //    cordova.plugins.notification.badge.set(10);
+        //}
         function onResume() {
             alert('resume');
             //cordova.plugins.notification.badge.clear();
         }
+
+        function onPause() {
+            setTimeout(function () {
+                alert("onPause");
+            }, 0);
+        };
+
     </script>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
