@@ -71,8 +71,11 @@
         //    cordova.plugins.notification.badge.set(10);
         //}
         function onResume() {
-            alert('resume');
-            //cordova.plugins.notification.badge.clear();
+            setTimeout(function () {
+                alert("onResume");
+                // navigator.notification.beep(1);
+                //cordova.plugins.notification.badge.set(10);
+            }, 0);
         }
 
         function onPause() {
