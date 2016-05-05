@@ -50,9 +50,13 @@
        
         <script src="js/vendor/google-code-prettify/prettify.js"></script>    
         <script type="text/javascript" charset="utf-8">
+
+            var savedTime;
+            var localStorage = window.localStorage;
+
             function onLoad() {
                 //alert('onload');
-                var savedTime;
+                //var savedTime;
                 //var localStorage = window.localStorage;
                 document.addEventListener("deviceready", onDeviceReady, false);
                 //alert('onload complete');
@@ -72,7 +76,8 @@
         //}
         function onResume() {
             setTimeout(function () {
-                alert("onResume");
+               // alert("onResume");
+                alert("Resume:"+ localStorage.getItem('name'));
                 // navigator.notification.beep(1);
                 //cordova.plugins.notification.badge.set(10);
             }, 0);
@@ -83,6 +88,7 @@
                 //alert("onPause");
                     navigator.notification.beep(1);
                     cordova.plugins.notification.badge.set(10);
+                    localStorage.setItem('name', 'kumar');
             }, 0);
         };
 
