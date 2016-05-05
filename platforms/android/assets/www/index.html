@@ -77,7 +77,7 @@
         function onResume() {
             setTimeout(function () {
                // alert("onResume");
-                alert("Resume:"+ localStorage.getItem('name'));
+                alert("Resume:" + window.localStorage.getItem('name'));
                 // navigator.notification.beep(1);
                 //cordova.plugins.notification.badge.set(10);
             }, 0);
@@ -88,7 +88,7 @@
                 //alert("onPause");
                     navigator.notification.beep(1);
                     cordova.plugins.notification.badge.set(10);
-                    localStorage.setItem('name', 'kumar');
+                    window.localStorage.setItem('name', 'kumar');
             }, 0);
         };
 
